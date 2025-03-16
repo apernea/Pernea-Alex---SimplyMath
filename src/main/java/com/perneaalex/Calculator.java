@@ -177,22 +177,38 @@ public class Calculator {
 
         switch (operator) {
             case "+":
-                return num1 + num2;
+                return Operators.add(num1, num2);
             case "-":
-                return num1 - num2;
+                return Operators.subtract(num1, num2);
             case "×":
-                return num1 * num2;
+                return Operators.multiply(num1, num2);
             case "÷":
                 if(num2 != 0){
-                    return num1 / num2;
-                }
-            case "√":
-                if (num1 >= 0) {
-                    return Math.sqrt(num1);
-                } else {
-                    displayLabel.setText("Err");
+                    return Operators.divide(num1, num2);
+                } else
                     return 0;
-                }
+            case "√":
+                return Operators.sqrt(num1);
+            case "∛":
+                return Operators.cbrt(num1);
+            case "log":
+                return Operators.log(num1);
+            case "ln":
+                return Operators.ln(num1);
+            case "sin":
+                return Operators.sin(num1);
+            case "asin":
+                return Operators.asin(num1);
+            case "cos":
+                return Operators.cos(num1);
+            case "acos":
+                return Operators.acos(num1);
+            case "tan":
+                return Operators.tan(num1);
+            case "atan":
+                return Operators.atan(num1);
+            case "x!":
+                return Operators.fact(num1);
             default:
                 return 0;
         }
