@@ -73,7 +73,7 @@ public class Operators {
         return Math.acos(a);
     }
 
-    //tg(x) & arctg(x) & arctg(x/y)
+    //tg(x) & arctg(x)
     public static double tan(double a){
         return Math.tan(a);
     }
